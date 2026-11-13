@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kai's Heroic Journey — Interactive Pixel Journey</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="glass-panel" id="hud">
+    <div class="hud-row">
+      <div class="techy-text" id="scene-title">Scene 1 of 14</div>
+      <div class="progress-chip" id="progress-chip">0%</div>
+    </div>
+    <div class="nav-controls">
+      <button class="nav-btn" id="btn-prev" aria-label="Previous scene">◀</button>
+      <button class="nav-btn" id="btn-next" aria-label="Next scene">▶</button>
+      <button class="nav-btn glow-btn" id="btn-bookmark" aria-label="Bookmark scene">☆</button>
+    </div>
+  </div>
+
+  <main class="journey-wrap">
+    <div id="scene-canvas-wrap" class="scene-wrap">
+      <canvas id="sceneCanvas" width="480" height="288"></canvas>
+      <div id="scene-text" class="scene-overlay">
+        <h2 id="scene-heading">Willow Hollow — The Start</h2>
+        <p id="scene-caption">Kai receives their first partner creature from Professor Vale. A bond begins.</p>
+        <div class="scene-meta">
+          <span class="region-tag">Region: Willow Hollow</span>
+          <span class="beat-tag" id="beat-tag">Heroic Beat #1</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="glass-panel" id="scene-detail" aria-hidden="true">
+      <button class="close-btn" id="btn-close-detail" aria-label="Close detail">✕</button>
+      <h3 id="detail-title"></h3>
+      <p id="detail-text"></p>
+      <div class="detail-meta">
+        <span><strong>Region:</strong> <span id="detail-region"></span></span>
+        <span><strong>Beat:</strong> <span id="detail-beat"></span></span>
+        <span><strong>Why heroic:</strong> <span id="detail-why"></span></span>
+      </div>
+    </div>
+  </main>
+
+  <div class="glass-panel" id="heroic-section">
+    <h2 class="techy-text">Heroic Moments</h2>
+    <div id="heroic-list" class="heroic-grid"></div>
+  </div>
+
+  <div class="glass-panel" id="onboarding" aria-hidden="false">
+    <div class="glass-panel-inner">
+      <h2>Welcome, Traveler</h2>
+      <p>Use <kbd>Arrow Keys</kbd> / <kbd>WASD</kbd> to walk through scenes. <kbd>Space</kbd> or <kbd>Enter</kbd> to open a scene detail. <kbd>Esc</kbd> to close. <kbd>B</kbd> to bookmark.</p>
+      <button class="glow-btn" id="btn-onboard-dismiss">Begin Journey</button>
+    </div>
+  </div>
+
+  <script src="scenes.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
